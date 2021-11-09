@@ -127,7 +127,7 @@ table {
   font-family: "coder";
   font-weight: bold;
   src: local("coder"),
-    url(../styles/NanumPenScript-Regular.ttf);
+    url(../styles/RobotoCondensed-Bold.ttf);
 }
 
 body {

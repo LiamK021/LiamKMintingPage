@@ -6,7 +6,32 @@ import * as s from "../../styles/globalStyles";
 import styled from "styled-components";
 import i1 from "../../assets/images/hidden.gif";
 import newbanner from "../../assets/images/logo.png"
+<<<<<<< Updated upstream
 import "./Main.css";
+=======
+
+export const StyledButton = styled.button`
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: "blue";
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+  -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+  -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+  :active {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+`;
+>>>>>>> Stashed changes
 
 export const ResponsiveWrapper = styled.div`
   display: flex;
@@ -83,6 +108,7 @@ function Main() {
         getData();
     }, [blockchain.account]);
 
+<<<<<<< Updated upstream
     return (
         <div style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
             <div style={{ padding: 24}}>
@@ -206,6 +232,66 @@ function Main() {
                         </s.Container>
                     </s.Container>
                 </ResponsiveWrapper>
+=======
+  return (
+    <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
+      <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "white"}}>
+        <s.TextTitle
+          style={{ display: "flex", flexDirection: "row", fontSize: 12, fontWeight: "bold", paddingRight: 10, margin: 0, 
+          borderStyle: "solid", borderColor: "black", borderWidth: 0,
+          borderRadius: 50, textAlign: "center", justifySelf: "center", justifyContent: "center"  }}
+        >
+          <a href="https://boocrew.io"><StyledImg alt={"BooCrew Logo"} 
+          src={newbanner} 
+          style={{width: 70, height: 70, textAlign: "center"}}></StyledImg></a>
+        </s.TextTitle>
+        <s.SpacerMedium />
+        <ResponsiveWrapper flex={1} style={{ padding: 24, paddingTop: 0 }}>
+          <s.Container flex={1} jc={"center"} ai={"center"} style={{paddingTop: 0, flexDirection: "column"}}>
+          <s.TextTitle
+              style={{ 
+              textAlign: "center", 
+              fontSize: 40, 
+              fontWeight: "bold", 
+              borderStyle: "solid", 
+              borderColor: "black",}}>
+                0.035 ETH + Gas
+              </s.TextTitle>
+            <StyledImg alt={"BooCrew Hidden"} src={i1} style={{paddingTop: 0, borderStyle: "solid", borderColor: "black", borderWidth: 5,
+                    borderRadius: 0 }}/>
+            <s.TextTitle
+              style={{ textAlign: "center", fontSize: 80, fontWeight: "bold", borderStyle: "solid", borderColor: "black", 
+              borderWidth: 0,
+              paddingLeft: 100,
+              paddingRight: 100,
+              borderRadius: 0,
+              marginTop: 0,
+              marginBottom: 0
+              }}
+            >
+              {blockchain.account == null ? "????" : (data.totalSupply)}/5555
+            </s.TextTitle>
+            {/* <s.SpacerMedium/> */}
+            <s.Container
+            flex={1}
+            jc={"center"}
+            ai={"center"}
+            style={{ 
+              backgroundColor: "white", 
+              padding: 24,
+              paddingTop: 0,
+              borderStyle: "solid", 
+              borderColor: "black", 
+              borderWidth: 0,
+              borderRadius: 30,
+              fontSize: 40 }}
+          >
+            {Number(data.totalSupply) === 5555 ? (
+              <>
+                <s.TextTitle style={{ textAlign: "center" }}>
+                  The sale has ended.
+                </s.TextTitle>
+>>>>>>> Stashed changes
                 <s.SpacerSmall />
             </div>
         </div>
