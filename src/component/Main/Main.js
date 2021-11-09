@@ -6,29 +6,12 @@ import * as s from "../../styles/globalStyles";
 import styled from "styled-components";
 import i1 from "../../assets/images/hidden.gif";
 import newbanner from "../../assets/images/logo.png"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-import "./Main.css";
-=======
-=======
->>>>>>> parent of b03be80 (update the button)
-=======
->>>>>>> parent of b03be80 (update the button)
 
 export const StyledButton = styled.button`
   padding: 10px;
   border-radius: 50px;
   border: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: "blue";
-=======
   background-color: #ffffff;
->>>>>>> parent of b03be80 (update the button)
-=======
-  background-color: #ffffff;
->>>>>>> parent of b03be80 (update the button)
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -45,13 +28,6 @@ export const StyledButton = styled.button`
     -moz-box-shadow: none;
   }
 `;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> parent of b03be80 (update the button)
-=======
->>>>>>> parent of b03be80 (update the button)
 
 export const ResponsiveWrapper = styled.div`
   display: flex;
@@ -128,146 +104,9 @@ function Main() {
     getData();
   }, [blockchain.account]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    return (
-        <div style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
-            <div style={{ padding: 24}}>
-                <ResponsiveWrapper flex={1} style={{ padding: 24, paddingTop: 0 }}>
-                    <s.Container flex={1} jc={"center"} ai={"center"} style={{ paddingTop: 0, flexDirection: "column" }}>
-                        <s.TextTitle
-                            style={{
-                                textAlign: "center", fontSize: 80, fontWeight: "bold", borderStyle: "solid", borderColor: "black",
-                                borderWidth: 0,
-                                paddingLeft: 100,
-                                paddingRight: 100,
-                                borderRadius: 0,
-                                marginTop: 0,
-                                marginBottom: 0
-                            }}
-                        >
-                            {blockchain.account == null ? "????" : (data.totalSupply)}/5555
-                        </s.TextTitle>
-                        <s.Container
-                            flex={1}
-                            jc={"center"}
-                            ai={"center"}
-                            style={{
-                                padding: 0,
-                                paddingTop: 0,
-                                borderStyle: "solid",
-                                borderColor: "black",
-                                borderWidth: 0,
-                                borderRadius: 30,
-                                fontSize: 40
-                            }}
-                        >
-                            {Number(data.totalSupply) === 5555 ? (
-                                <>
-                                    <s.TextTitle style={{ textAlign: "center" }}>
-                                        The sale has ended.
-                                    </s.TextTitle>
-                                    <s.SpacerSmall />
-                                    <s.TextDescription style={{ textAlign: "center" }}>
-                                        Dont worry, you're not missing out! You can still get Boo Crew NFTs on{" "}
-                                        <a
-                                            // target={"_blank"}
-                                            href={"https://testnets.opensea.io/collection/rinkeby-doodlenauts"}
-                                        >
-                                            Opensea.io
-                                        </a>
-                                    </s.TextDescription>
-                                </>
-                            ) : (
-                                <>
-                                    <s.TextDescription style={{ textAlign: "center", fontSize: 40 }}>
-                                        {feedback}
-                                    </s.TextDescription>
-                                    {blockchain.account === "" ||
-                                        blockchain.smartContract === null ? (
-                                        <s.Container ai={"center"} jc={"center"}>
-                                            <s.TextDescription style={{ textAlign: "center", fontSize: 80, marginBottom: 0 }}>
-                                                Connect to the Boo Crew NFT Minter!
-                                            </s.TextDescription>
-                                            <s.SpacerSmall />
-                                            <button
-                                                className="connect-btn"
-                                                style={{ fontFamily: "coder" }}
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    dispatch(connect());
-                                                    getData();
-                                                }}
-                                            >
-                                                CONNECT
-                                            </button>
-                                            <s.SpacerLarge />
-                                            {blockchain.errorMsg !== "" ? (
-                                                <>
-                                                    <s.SpacerSmall />
-                                                    <s.TextDescription style={{ textAlign: "center", fontSize: 50 }}>
-                                                        {blockchain.errorMsg}
-                                                    </s.TextDescription>
-                                                </>
-                                            ) : null}
-                                        </s.Container>
-                                    ) : (
-                                        <s.Container ai={"center"} jc={"center"} fd={"row"} style={{ marginTop: 0, paddingTop: 0 }}>
-                                            <form>
-                                                I want <input
-                                                    id="inputBox"
-                                                    placeholder="#"
-                                                    type="number"
-                                                    min="1"
-                                                    max="100"
-                                                    style={{
-                                                        fontSize: 60,
-                                                        textAlign: "center",
-                                                        backgroundColor: "#FFA537",
-                                                        borderWidth: 4,
-                                                        borderColor: "black",
-                                                        borderStyle: "solid",
-                                                        borderRadius: 40,
-                                                        paddingRight: 10,
-                                                        width: 80,
-                                                        fontFamily: "coder",
-                                                    }}
-                                                /> Ghosts
-                                            </form>
-                                            <s.SpacerSmall />
-                                            <div
-                                                className="connect-btn"
-                                                disabled={claimingNft ? 1 : 0}
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    claimNFTs(1);
-                                                    getData();
-                                                }}
-                                            >
-                                                {claimingNft ? "BUSY" : "MINT"}
-                                            </div>
-                                        </s.Container>
-                                    )}
-                                </>
-                            )}
-                        </s.Container>
-                    </s.Container>
-                </ResponsiveWrapper>
-=======
-  return (
-    <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
-      <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "white"}}>
-=======
   return (
     <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
       <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "#FFA537"}}>
->>>>>>> parent of b03be80 (update the button)
-=======
-  return (
-    <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
-      <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "#FFA537"}}>
->>>>>>> parent of b03be80 (update the button)
         <s.TextTitle
           style={{ display: "flex", flexDirection: "row", fontSize: 12, fontWeight: "bold", paddingRight: 10, margin: 0, 
           borderStyle: "solid", borderColor: "black", borderWidth: 0,
@@ -309,15 +148,7 @@ function Main() {
             jc={"center"}
             ai={"center"}
             style={{ 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              backgroundColor: "white", 
-=======
               backgroundColor: "#FFA537", 
->>>>>>> parent of b03be80 (update the button)
-=======
-              backgroundColor: "#FFA537", 
->>>>>>> parent of b03be80 (update the button)
               padding: 24,
               paddingTop: 0,
               borderStyle: "solid", 
@@ -331,13 +162,6 @@ function Main() {
                 <s.TextTitle style={{ textAlign: "center" }}>
                   The sale has ended.
                 </s.TextTitle>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> parent of b03be80 (update the button)
-=======
->>>>>>> parent of b03be80 (update the button)
                 <s.SpacerSmall />
                 <s.TextDescription style={{ textAlign: "center" }}>
                   Dont worry, you're not missing out! You can still get Boo Crew NFTs on{" "}
