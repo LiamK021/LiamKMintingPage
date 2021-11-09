@@ -7,9 +7,12 @@ import styled from "styled-components";
 import i1 from "../../assets/images/hidden.gif";
 import newbanner from "../../assets/images/logo.png"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import "./Main.css";
 =======
+=======
+>>>>>>> parent of b03be80 (update the button)
 =======
 >>>>>>> parent of b03be80 (update the button)
 
@@ -18,7 +21,11 @@ export const StyledButton = styled.button`
   border-radius: 50px;
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: "blue";
+=======
+  background-color: #ffffff;
+>>>>>>> parent of b03be80 (update the button)
 =======
   background-color: #ffffff;
 >>>>>>> parent of b03be80 (update the button)
@@ -39,7 +46,10 @@ export const StyledButton = styled.button`
   }
 `;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of b03be80 (update the button)
 =======
 >>>>>>> parent of b03be80 (update the button)
 
@@ -118,6 +128,7 @@ function Main() {
     getData();
   }, [blockchain.account]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
     return (
@@ -252,6 +263,11 @@ function Main() {
     <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
       <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "#FFA537"}}>
 >>>>>>> parent of b03be80 (update the button)
+=======
+  return (
+    <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
+      <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "#FFA537"}}>
+>>>>>>> parent of b03be80 (update the button)
         <s.TextTitle
           style={{ display: "flex", flexDirection: "row", fontSize: 12, fontWeight: "bold", paddingRight: 10, margin: 0, 
           borderStyle: "solid", borderColor: "black", borderWidth: 0,
@@ -294,7 +310,11 @@ function Main() {
             ai={"center"}
             style={{ 
 <<<<<<< HEAD
+<<<<<<< HEAD
               backgroundColor: "white", 
+=======
+              backgroundColor: "#FFA537", 
+>>>>>>> parent of b03be80 (update the button)
 =======
               backgroundColor: "#FFA537", 
 >>>>>>> parent of b03be80 (update the button)
@@ -312,7 +332,10 @@ function Main() {
                   The sale has ended.
                 </s.TextTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of b03be80 (update the button)
 =======
 >>>>>>> parent of b03be80 (update the button)
                 <s.SpacerSmall />
