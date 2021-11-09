@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
 .metaverse-control-title{
