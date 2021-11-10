@@ -63,7 +63,7 @@ function Main() {
     if (_amount <= 0) {
       return;
     }
-    setFeedback("Minting your Official BooCrew NFT...");
+    setFeedback("Minting your Official $quidGamesNFT...");
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
@@ -87,7 +87,7 @@ function Main() {
       })
       .then((receipt) => {
         setFeedback(
-          "Your BooCrew NFT has been successfully minted!"
+          "Your $quidGamesNFT has been successfully minted!"
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -105,14 +105,12 @@ function Main() {
   }, [blockchain.account]);
 
   return (
-    <s.Screen style={{ backgroundColor: "var(--black)", fontSize: 40 }}>
-      <s.Container flex={1} ai={"center"} style={{ padding: 24, backgroundColor: "white"}}>
-        <ResponsiveWrapper flex={1} style={{ padding: 24, paddingTop: 0 }}>
           <s.Container flex={1} jc={"center"} ai={"center"} style={{paddingTop: 0, flexDirection: "column"}}>
           <s.TextTitle
               style={{ 
               textAlign: "center", 
               fontSize: 40, 
+              color: "white",
               fontWeight: "bold", 
               borderStyle: "solid", 
               borderColor: "black",}}>
@@ -125,7 +123,8 @@ function Main() {
               paddingRight: 100,
               borderRadius: 0,
               marginTop: 0,
-              marginBottom: 0
+              marginBottom: 0,
+              color: "white"
               }}
             >
               {blockchain.account == null ? "????" : (data.totalSupply)}/5697
@@ -136,13 +135,14 @@ function Main() {
             jc={"center"}
             ai={"center"}
             style={{ 
-              backgroundColor: "lightblue", 
+              backgroundColor: "white", 
               padding: 24,
-              paddingTop: 0,
+              paddingTop: 24,
               borderStyle: "solid", 
               borderColor: "black", 
-              borderWidth: 0,
-              borderRadius: 30,
+              borderWidth: 5,
+              color: "white",
+              borderRadius: 0,
               fontSize: 40,
               maxHeight: 500, }}
           >
@@ -179,8 +179,8 @@ function Main() {
                 {blockchain.account === "" ||
                 blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
-                    <s.TextDescription style={{ textAlign: "center", fontSize: 80, marginBottom: 0 }}>
-                      Connect to the Boo Crew NFT Minter!
+                    <s.TextDescription style={{ textAlign: "center", fontSize: 80, marginBottom: 0, color:"black" }}>
+                      Connect to Mint
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
@@ -200,25 +200,26 @@ function Main() {
                     {blockchain.errorMsg !== "" ? (
                       <>
                         <s.SpacerSmall />
-                        <s.TextDescription style={{ textAlign: "center", fontSize: 50}}>
+                        <s.TextDescription style={{ textAlign: "center", fontSize: 50, backgroundColor: "white"}}>
                           {blockchain.errorMsg}
                         </s.TextDescription>
                       </>
                     ) : null}
                   </s.Container>
                 ) : (
-                  <s.Container ai={"center"} jc={"center"} fd={"row"} style={{marginTop: 0, paddingTop: 0}}>
+                  <s.Container ai={"center"} jc={"center"} fd={"row"} style={{marginTop: 0, paddingTop: 0, color:"black"}}>
                     <form>
                     I want <input 
                     id="inputBox"
                     placeholder="#" 
                     type="number" 
                     min="1" 
-                    max="100"
+                    max="3"
                     style={{
                       fontSize: 60,
+                      color: "white",
                       textAlign: "center",
-                      backgroundColor: "#FFA537",
+                      backgroundColor: "black",
                       borderWidth: 4,
                       borderColor: "black",
                       borderStyle: "solid",
@@ -229,7 +230,7 @@ function Main() {
                       // marginLeft: 0,
                       width: 80,
                       fontFamily: "coder",}}
-                    /> Ghosts
+                    /> NFTs
                     </form>
                     <s.SpacerSmall/>
                     <StyledButton
@@ -249,25 +250,7 @@ function Main() {
             )}
           </s.Container>
           </s.Container>
-          {/* <s.SpacerMedium /> */}
-        </ResponsiveWrapper>
-        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
-          {/* <s.TextDescription style={{ textAlign: "center", fontSize: 40}}>
-                      <a 
-                      href="https://rinkeby.etherscan.io/address/0x8815e06FC5b57Bd4d5590977a697582f19d2330e"
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                        fontSize: 20,
-                      }}
-                      >Boo Crew NFT Smart Contract</a>
-          </s.TextDescription> */}
-          <s.SpacerSmall />
-          {/* <s.TextDescription style={{ textAlign: "center", fontSize: 9 }}>
-          </s.TextDescription> */}
-        </s.Container>
-      </s.Container>
-    </s.Screen>
+
   );
 }
 

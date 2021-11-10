@@ -1,6 +1,7 @@
 .App {
   max-width: 1280px;
   margin: auto;
+  background-color: black;
 }
 
 .App-logo {
@@ -23,6 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: black;
 }
 
 .App-link {

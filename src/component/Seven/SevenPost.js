@@ -2,16 +2,18 @@ import React from "react";
 
 import "./SevenPost.css";
 
-class SevenPost extends React.Component{
+class SevenPost extends React.Component {
     // constructor(props){
     //     super(props);
     // }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <h2>The Sevens are</h2>
-                <h2 className="sevenpost-control-red">NFT Collectible</h2>
-                <p className="sevenpost-control-paragraph">7,000 unique aesthetic collectibles with references from pop culture, anime, games, memes, movies, and more. Find your fit in the metaverse.</p>
+                <h2>$quidGamesNFT</h2>
+                <h2 className="sevenpost-control-red" style={{fontSize: 30}}>Join The Game.</h2>
+                {/* <h1 style={{height: 20}}></h1> */}
+                {/* <p className="sevenpost-control-paragraph" style={{color: "white"}}>
+                    Will you join the $quid Game? Only 1 Minter will have a chance at winning the LEGENDARY 1/1 $quid Game NFT.</p> */}
             </div>
         )
     }

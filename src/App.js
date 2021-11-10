@@ -11,15 +11,17 @@ import ToKnow from './component/ToKnow/ToKnow';
 import Main from './component/Main/Main';
 function App() {
   return (
-    <div className="App">
-      <Seven/>
-      <Main/>
-      <hr/>
-      <MetaVerse/>
-      <ToKnow/>
+    <div className="App" style={{ backgroundColor: "black" }}>
+      <Seven />
+      <Announcement />
+      <Main />
+      <hr />
+
+      <br></br>
       <LaunchLoadMap />
-      <DevelopmentLoadMap />
-      {/* <Announcement /> */}
+      <MetaVerse />
+      {/* <DevelopmentLoadMap /> */}
+      
     </div>
   );
 }

@@ -11,10 +11,11 @@ class Seven extends React.Component{
             <div className = "seven-control">
                 <div className="seven-control-left">
                     <SevenPost/>
-                </div>
-                <div className="seven-control-right">
                     <img src= {sevenRight} alt = "" className="seven-control-image"/>
                 </div>
+                {/* <div className="seven-control-right">
+                    
+                </div> */}
             </div>
         )
     }
